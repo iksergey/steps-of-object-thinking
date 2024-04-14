@@ -9,3 +9,5 @@ repository.Append(person1);
 Printer printer = new Printer();
 printer.Print(repository);
 
+Student s = new Student("Студент 1", 11, "Школа # 322");
+Console.WriteLine(s.ToString());

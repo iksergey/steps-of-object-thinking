@@ -6,10 +6,10 @@ class Person
         this.Age = age;
     }
 
-    public string Name { get; private set; }
-    public int Age { get; private set; }
+    public string Name { get; protected set; }
+    public int Age { get; protected set; }
 
-    public string ToString()
+    public virtual string ToString()
     {
         return $"Имя: {this.Name} возраст: {this.Age}";
     }
