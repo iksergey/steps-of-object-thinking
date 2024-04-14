@@ -9,6 +9,10 @@ class Repository
         this.people = new Person[this.count];
     }
 
+    // public int Index { get { return index; } }
+    // public int Index { get => index; }
+    public int Index => index;
+
     public void Append(Person person)
     {
         if (index >= count) return;
@@ -24,13 +28,4 @@ class Repository
         }
         return people[id];
     }
-
-    // public void Print()
-    // {
-    //     for (int i = 0; i < this.index; i++)
-    //     {
-    //         Person temp = people[i];
-    //         Console.WriteLine($"Имя: {temp.Name} возраст: {temp.Age}");
-    //     }
-    // }
 }
