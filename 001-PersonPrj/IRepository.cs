@@ -1,6 +1,3 @@
-interface IRepository
+interface IRepository : IRepo<Person>
 {
-    int Index { get; }
-    void Append(params Person[] people);
-    public Person GetById(int id);
 }
