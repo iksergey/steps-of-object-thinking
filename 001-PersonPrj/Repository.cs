@@ -1,23 +1,26 @@
 class Repository
 {
-    private Person[] people;
+    private Person[] storage;
     private int count;
     private int index = 0;
     public Repository(int count)
     {
         this.count = count;
-        this.people = new Person[this.count];
+        this.storage = new Person[this.count];
     }
 
     // public int Index { get { return index; } }
     // public int Index { get => index; }
     public int Index => index;
 
-    public void Append(Person person)
+    public void Append(params Person[] people)
     {
-        if (index >= count) return;
-        people[index] = person;
-        index++;
+        foreach (var person in people)
+        {
+            if (index >= count) return;
+            storage[index] = person;
+            index++;
+        }
     }
 
     public Person GetPersonById(int id)
@@ -26,6 +29,6 @@ class Repository
         {
             return new Person("empty", -1);
         }
-        return people[id];
+        return storage[id];
     }
 }
