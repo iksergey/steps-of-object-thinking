@@ -1,4 +1,4 @@
-class Person
+abstract class Person
 {
     public Person(string name, int age)
     {
@@ -9,7 +9,7 @@ class Person
     public string Name { get; protected set; }
     public int Age { get; protected set; }
 
-    public virtual string ToString()
+    public override string ToString()
     {
         return $"Имя: {this.Name} возраст: {this.Age}";
     }
