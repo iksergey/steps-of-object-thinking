@@ -6,21 +6,31 @@ class Repository
     public Repository(int count)
     {
         this.count = count;
-        people = new Person[count];
+        this.people = new Person[this.count];
     }
 
     public void Append(Person person)
     {
+        if (index >= count) return;
         people[index] = person;
         index++;
     }
 
-    public void Print()
+    public Person GetPersonById(int id)
     {
-        for (int i = 0; i < this.index; i++)
+        if (id < 0 || id >= index)
         {
-            Person temp = people[i];
-            Console.WriteLine($"Имя: {temp.Name} возраст: {temp.Age}");
+            return new Person("empty", -1);
         }
+        return people[id];
     }
+
+    // public void Print()
+    // {
+    //     for (int i = 0; i < this.index; i++)
+    //     {
+    //         Person temp = people[i];
+    //         Console.WriteLine($"Имя: {temp.Name} возраст: {temp.Age}");
+    //     }
+    // }
 }
