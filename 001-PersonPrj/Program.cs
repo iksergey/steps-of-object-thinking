@@ -11,3 +11,8 @@ printer.Print(repository);
 
 Student s = new Student("Студент 1", 11, "Школа # 322");
 Console.WriteLine(s.ToString());
+
+Employee employee = new Employee("Рабочий 1", 31, 40000);
+Console.WriteLine(employee.ToString());
+Teacher teacher = new Teacher("Учитель 1", 33, "Математика");
+Console.WriteLine(teacher.ToString());
